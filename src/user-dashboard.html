@@ -9,7 +9,12 @@
   <body>
     <header>
       <nav>
-        <img src="" alt="e-learning logo" />
+        <img
+          src="../images/logo.png"
+          width="50px"
+          height="50px"
+          alt="e-learning logo"
+        />
         <ul>
           <li><a href="home.html">Home</a></li>
           <li><a href="courses.html">Course</a></li>
@@ -20,52 +25,51 @@
       </nav>
     </header>
 
-    <aside>
-      <span>Filter</span>
-
-      <form action="">
-        <div>
-          <span>Course length</span>
-
-          <select name="" id="">
-            <option value="short">Short</option>
-            <option value="medium">Medium</option>
-            <option value="long">Long</option>
-          </select>
-        </div>
-
-        <div>
-          <span>Difficulty</span>
-
-          <select name="" id="">
-            <option value="beginner">Beginner</option>
-            <option value="intermediate">Intermediate</option>
-            <option value="advanced">Advanced</option>
-          </select>
-        </div>
-      </form>
-    </aside>
-
     <section>
-      <form action="">
-        <label for="search-field">Search course</label>
-        <input type="text" name="search-field" id="search-field" />
-        <input type="submit" value="search" />
-      </form>
+      <h1>User Dashboard</h1>
 
-      <h1>Search results</h1>
+      <ul>
+        <li><button>Saved</button></li>
+        <li><button>In progress</button></li>
+        <li><button>Completed</button></li>
+      </ul>
 
-      <div class="grid-container">
-        <div class="card">
-          <div class="top">
-            <a href="course-overview.html">
-              <img src="course-1-thumbnail.jpg" alt="Course 1" />
+      <div>
+        <div class="course-container">
+          <div class="thumbnail">
+            <a href="https://www.youtube.com/watch?v=5_5oE5lgrhw&t=2s">
+              <img src="" alt="Introduction to DSA" />
             </a>
           </div>
-          <div class="bottom">
-            <a href="course-overview.html"><strong>Course title</strong></a>
-            <p>Course description</p>
-            <p><i></i> 4.8</p>
+
+          <div class="content">
+            <strong>Introduction to Data Structures and Algorithms</strong>
+
+            <p>
+              A beginner friendly introduction to common data structures such as
+              linked lists, stacks, queues and graphs.
+            </p>
+
+            <p>Progress: <strong>56%</strong></p>
+          </div>
+        </div>
+
+        <div class="course-container">
+          <div class="thumbnail">
+            <a href="https://www.yodutube.com/watch?v=5_5oE5lgrhw&t=2s">
+              <img src="" alt="Fundamentals of networking thumbnail" />
+            </a>
+          </div>
+
+          <div class="content">
+            <strong>Fundamentals of Networking</strong>
+
+            <p>
+              A beginner friendly introduction to common data structures such as
+              linked lists, stacks, queues and graphs.
+            </p>
+
+            <button>Enroll</button>
           </div>
         </div>
       </div>
