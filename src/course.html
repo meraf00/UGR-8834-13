@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Introductory course for Discrete Mathematics"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction to Discrete Mathematics for Computer Science</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img
+          src="images/logo.png"
+          width="50px"
+          height="50px"
+          alt="E-learning logo"
+        />
+
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Log in</a></li>
+          <li><a href="user-dashboard.html">Dashboard</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <aside>
+      <h1>Content</h1>
+
+      <ul>
+        <li>
+          <a href="#introduction">Introduction</a>
+        </li>
+
+        <li>
+          <a href="#propositional-logic">Propositional Logic</a>
+
+          <ul>
+            <li>
+              <a href="#proposition">Proposition</a>
+            </li>
+            <li>
+              <a href="#rules-of-inference">Rules of Inference</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+
+    <article>
+      <h1 id="introduction">Introduction to Logic</h1>
+
+      <section>
+        <video controls>
+          <source type="video/mp4" src="videos/lecture-1.mp4" />
+          <track
+            src="videos/lecture-1.vtt"
+            label="English"
+            kind="captions"
+            srclang="en-us"
+            default
+          />
+        </video>
+
+        <div>
+          <strong>Video Transcript</strong>
+        </div>
+
+        <p>
+          Now whats interesting about this is the way in which it worked.
+          Because this machine, was dedicated to playing chess.
+        </p>
+      </section>
+
+      <section>
+        <h1 id="propositional-logic">Propositional Logic</h1>
+
+        <h2 id="proposition">Proposition</h2>
+
+        <p>
+          A proposition is a declarative sentence (that is, a sentence that
+          declares a fact) that is either true or false, but not both. We use
+          letters to denote propositional variables(orsentential variables),
+          that is, variables that represent propositions, just as letters are
+          used to denote numerical variables. The conventional letters used for
+          propositional variables are p, q, r, s, … . The truth value of a
+          proposition
+        </p>
+
+        <h2 id="rules-of-inference">Rules of Inference</h2>
+
+        <p>
+          An argument in propositional logic is a sequence of propositions. All
+          but the final proposition in the argument are called premises and the
+          final proposition is called the conclusion. An argument is valid if
+          the truth of all its premises implies that the conclusion is true. An
+          argument form in propositional logic is a sequence of compound
+          propositions involving propositional variables. An argument form is
+          valid if no matter which particular propositions are substituted for
+          the propositional variables in its premises, the conclusion is true if
+          the premises are all true.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Rule of Inference</th>
+              <th>Tautology</th>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>p, p → q ∴ q</td>
+              <td>p ∧ (p → q)) → q</td>
+              <td>Modus ponens</td>
+            </tr>
+
+            <tr>
+              <td>¬q p → q ∴ ¬p</td>
+              <td>(¬q ∧ (p → q)) → ¬p</td>
+              <td>Modus tollens</td>
+            </tr>
+            <tr>
+              <td>p → q q → r ∴ p → r</td>
+              <td>((p → q) ∧ (q → r)) → (p → r)</td>
+              <td>Hypothetical syllogism</td>
+            </tr>
+            <tr>
+              <td>p ∨ q ¬p ∴ q</td>
+              <td>((p ∨ q) ∧ ¬p) → q</td>
+              <td>Disjunctive syllogism</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h1>Quiz</h1>
+
+        <form action="">
+          <div>
+            <fieldset>
+              <legend>Which one of the following is a proposition?</legend>
+              <div>
+                <input type="radio" value="A" id="q1-a" name="q1" />
+                <label for="q1-a">A. What time is it?</label>
+              </div>
+              <div>
+                <input type="radio" value="B" id="q1-b" name="q1" />
+                <label for="q1-b">B. Read this carefully</label>
+              </div>
+              <div>
+                <input type="radio" value="C" id="q1-c" name="q1" />
+                <label for="q1-c">C. Toronto is the capital of Canada.</label>
+              </div>
+              <div>
+                <input type="radio" value="D" id="q1-d" name="q1" />
+                <label for="q1-d">D. All</label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Which one is not valid argument?</legend>
+              <div>
+                <input type="radio" value="A" id="q2-a" name="q2" />
+                <label for="q2-a">A. p → q q → r ∴ p → r</label>
+              </div>
+              <div>
+                <input type="radio" value="B" id="q2-b" name="q2" />
+                <label for="q2-b">B. p ∨ q ¬p ∴ q</label>
+              </div>
+              <div>
+                <input type="radio" value="C" id="q2-c" name="q2" />
+                <label for="q2-c">C. ¬q p → q ∴ ¬p</label>
+              </div>
+              <div>
+                <input type="radio" value="D" id="q2-d" name="q2" />
+                <label for="q2-d">D. None</label>
+              </div>
+            </fieldset>
+
+            <input type="submit" value="Check" />
+          </div>
+        </form>
+      </section>
+    </article>
+
+    <aside>
+      <div>
+        <h2>Supportive resources</h2>
+        <ul>
+          <li>
+            <a
+              href="https://www.amazon.com/Discrete-Mathematics-Applications-Kenneth-Rosen-ebook/dp/B07FF9DY66"
+            >
+              Discrete Mathematics and Its Applications 8th Edition, by Kenneth
+              Rosen (Author)
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.amazon.com/Discrete-Mathematics-Applications-Susanna-Epp-ebook/dp/B00B6FAZ2Q"
+            >
+              Discrete Mathematics with Applications 4th Edition, Susanna S. Epp
+              (Author)
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Related courses</h2>
+        <ul>
+          <li>
+            <a href="course-overview.html"
+              >Introduction to Discrete Mathematics</a
+            >
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <footer>
+      <div>
+        <div>
+          <span>Sitemap</span>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <span>Contributers</span>
+          <ul>
+            <li>
+              <a href="http://www.aau.edu.et/">Addis Ababa University </a>
+            </li>
+            <li>
+              <a href="http://www.bdu.edu.et/">Bahirdar University </a>
+            </li>
+            <li>
+              <a href="https://moe.gov.et/">Ministry of Eduction </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <ul>
+          <li><a href="https://facebook.com">Facebook</a></li>
+          <li><a href="https://t.me/elearning000">Telegram</a></li>
+          <li><a href="https://twitter.com">Twitter</a></li>
+          <li><a href="https://youtube.com">Youtube</a></li>
+        </ul>
+        <span>Copyright &copy; 2022 E-Learning</span>
+      </div>
+    </footer>
+  </body>
+</html>
