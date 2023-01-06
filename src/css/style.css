@@ -1,0 +1,238 @@
+:root {
+  --primary: #072e71;
+  --primary-light: #4556a0;
+  --primary-dark: #000545;
+  --on-primary: #ffffff;
+
+  --secondary: #c8511a;
+  --secondary-light: #ff8147;
+  --secondary-dark: #902100;
+  --on-secondary: #ffffff;
+
+  --surface: #ececec;
+  --on-surface: black;
+
+  --border-radius: 0.2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  color: var(--primary);
+}
+
+.link:hover {
+  color: var(--primary-light);
+  text-decoration: underline;
+}
+
+.link:visited {
+  color: var(--primary-dark);
+}
+
+.link--undecorated {
+  text-decoration: none;
+}
+
+.button {
+  outline: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  background-color: var(--secondary);
+  color: var(--on-secondary);
+}
+
+.button:hover {
+  background-color: var(--secondary-dark);
+  /* color: black; */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  box-shadow: #333 0rem -0.5rem 1rem;
+  background-color: white;
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__item {
+  list-style: none;
+  padding: 0.5rem;
+}
+
+.header {
+  position: relative;
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  color: var(--primary);
+  text-shadow: 0rem 0.2rem 1rem #ffffff;
+}
+
+.header::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.192);
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 2rem);
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.header__title {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 3rem;
+  padding: 1rem;
+}
+
+.input {
+  outline: none;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.7rem;
+  width: 100%;
+}
+
+.search__input {
+  position: relative;
+  width: 20rem;
+}
+
+.search__input-label {
+  position: absolute;
+  color: black;
+  top: 50%;
+  left: 0.8rem;
+  transform: translateY(-50%);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.search__input-label--hidden {
+  display: none;
+}
+
+.search__button {
+  display: block;
+  margin: 0.5rem auto;
+}
+
+.container {
+  padding: 0 10rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 3rem 0;
+}
+
+.container__title {
+  padding: 1rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.container__content {
+  padding: 0 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cards {
+  display: flex;
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+.course {
+  flex-grow: 0;
+  flex-shrink: 0;
+  max-width: 15rem;
+  margin-right: 3rem;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.39) 0.1rem 0.1rem 10px;
+  cursor: pointer;
+}
+
+.course__thumbnail {
+  display: block;
+  max-width: 100%;
+}
+
+.course__content {
+  padding: 1rem;
+}
+
+.course__link {
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.course__description {
+  margin-top: 0.6rem;
+}
+
+.course__rating {
+  margin-top: 0.6rem;
+  color: var(--secondary-dark);
+  font-weight: bold;
+}
+
+.footer {
+  background-color: var(--surface);
+  color: var(--on-surface);
+  margin-bottom: 0;
+}
+
+.footer__list {
+  list-style: none;
+  padding: 0 1rem;
+  margin-top: 1rem;
+}
+
+.footer__list--flex {
+  display: flex;
+}
+
+.footer__content {
+  display: flex;
+  padding: 1rem;
+}
+
+.footer__content--reversed {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.247);
+}
+
+.footer__column {
+  margin-right: 8rem;
+}
+
+.footer__social {
+  padding: 0 1rem;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  padding: 0;
+}
