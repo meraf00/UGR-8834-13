@@ -1,118 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="Contact E-learing" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css">
-    <title>Contact us</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <img
-          src="images/logo.png"
-          width="50px"
-          height="50px"
-          alt="E-learning logo"
-        />
 
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="courses.html">Course</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="login.html">Log in</a></li>
-          <li><a href="user-dashboard.html">Dashboard</a></li>
-        </ul>
-      </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="Contact E-learing" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>Contact us</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <img class="navbar__logo" src="images/logo.png" width="50px" height="50px" alt="E-learning logo" />
+
+    <ul class="nav list">
+      <li class="nav__item"><a class="link link--undecorated nav__link--active" href="home.html">Home</a></li>
+      <li class="nav__item"><a class="link link--undecorated" href="courses.html">Courses</a></li>
+      <li class="nav__item"><a class="link link--undecorated" href="about.html">About</a></li>
+      <li class="nav__item"><a class="link link--undecorated" href="contact.html">Contact</a></li>
+      <li class="nav__item"><a class="link link--undecorated" href="login.html">Log in</a></li>
+      <li class="nav__item"><a class="link link--undecorated" href="user-dashboard.html">Dashboard</a></li>
+    </ul>
+  </nav>
+
+  <section class="container">
+    <header>
+      <h1 class="container__title">Contact us</h1>
     </header>
 
-    <section>
-      <header><h1>Contact us</h1></header>
+    <main class="stack">
+      <div>
+        <p class="container__content">
+          If you are a learner and need help, please contact us to find FAQs and troubleshooting. You can search for
+          your issue.
+          Feel free to contact us through phone, email or in person.</p>
 
-      <main>
-        <p>Feel free to contact us through phone, email or in person.</p>
-
-        <ul>
-          <li>
-            <img src="images/icons/phone.png" alt="Phone icon" /><a
-              href="tel:+251912345678"
-              >0912345678</a
-            >
+        <ul class="list container__content">
+          <li class="list__item list__item--flex">
+            <img class="icon" src="images/icons/phone.png" alt="Phone icon" />
+            <a class="link link--undecorated" href="tel:+251912345678">0912345678</a>
           </li>
-          <li>
-            <img src="images/icons/emial.png" alt="Mail icon" /><a
-              href="mailto:elearn@gmail.com"
-              >elearn@gmail.com</a
-            >
+          <li class="list__item list__item--flex">
+            <img class="icon" src="images/icons/email.png" alt="Mail icon" />
+            <a class="link link--undecorated" href="mailto:elearn@gmail.com">elearn@gmail.com</a>
           </li>
-          <li>
-            <img src="images/icons/location.png" alt="Location icon" />
-            <a
-              href="https://www.google.com/maps/search/aait+map/@9.0403673,38.7619606,18.58z"
-            >
-              Addis Ababa, Ethiopia</a
-            >
+          <li class="list__item list__item--flex">
+            <img class="icon" src="images/icons/location.png" alt="Location icon" />
+            <a class="link link--undecorated"
+              href="https://www.google.com/maps/search/aait+map/@9.0403673,38.7619606,18.58z">
+              Addis Ababa, Ethiopia</a>
           </li>
         </ul>
+      </div>
 
-        <form action="">
+      <form action="" class="container__content">
+        <div class="container__content">
           <label for="email-field">Email</label>
-          <input type="email" id="email-field" placeholder="Your email" />
+          <input class="input input--bordered" type="email" id="email-field" placeholder="Your email" />
+        </div>
+
+        <div class="container__content">
           <label for="message-field">Message</label>
-          <textarea
-            name="message"
-            id="message-field"
-            cols="30"
-            rows="10"
-            placeholder="Your message"
-          ></textarea>
-          <input type="submit" value="Send" />
-        </form>
-      </main>
-    </section>
-
-    <footer>
-      <div>
-        <div>
-          <span>Sitemap</span>
-          <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="about.html">About us</a></li>
-            <li><a href="contact.html">Contact us</a></li>
-          </ul>
+          <textarea class="input input--bordered textarea" name="message" id="message-field" cols="30" rows="10"
+            placeholder="Your message"></textarea>
         </div>
-
-        <div>
-          <span>Contributers</span>
-          <ul>
-            <li>
-              <a href="http://www.aau.edu.et/">Addis Ababa University </a>
-            </li>
-            <li>
-              <a href="http://www.bdu.edu.et/">Bahirdar University </a>
-            </li>
-            <li>
-              <a href="https://moe.gov.et/">Ministry of Eduction </a>
-            </li>
-          </ul>
+        <div class="container__content">
+          <input class="button" type="submit" value="Send" />
         </div>
-      </div>
+      </form>
+    </main>
+  </section>
 
-      <div>
-        <ul>
-          <li><a href="https://facebook.com">Facebook</a></li>
-          <li><a href="https://t.me/elearning000">Telegram</a></li>
-          <li><a href="https://twitter.com">Twitter</a></li>
-          <li><a href="https://youtube.com">Youtube</a></li>
+  <footer class="container footer">
+    <div class="footer__content">
+      <div class="footer__group">
+        <span class="container__title">Sitemap</span>
+        <ul class="list footer__list">
+          <li><a class="link link--undecorated" href="home.html">Home</a></li>
+          <li><a class="link link--undecorated" href="courses.html">Courses</a></li>
+          <li><a class="link link--undecorated" href="about.html">About us</a></li>
+          <li><a class="link link--undecorated" href="contact.html">Contact us</a></li>
         </ul>
-        <span>Copyright &copy; 2022 E-Learning</span>
       </div>
-    </footer>
 
-    <script src="js/main.js"></script>
-  </body>
+      <div class="footer__group">
+        <span class="container__title">Contributers</span>
+        <ul class="list footer__list">
+          <li>
+            <a class="link link--undecorated" href="http://www.aau.edu.et/">Addis Ababa University</a>
+          </li>
+          <li>
+            <a class="link link--undecorated" href="http://www.bdu.edu.et/">Bahirdar University</a>
+          </li>
+          <li>
+            <a class="link link--undecorated" href="https://moe.gov.et/">Ministry of Eduction</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__copyright">
+      <ul class="list footer__list footer__list--flex">
+        <li class="footer__social">
+          <a href="https://facebook.com">
+            <img class="icon" src="images/icons/facebook.png" alt="Facebook icon" />
+          </a>
+        </li>
+
+        <li class="footer__social">
+          <a href="https://t.me/elearning000">
+            <img class="icon" src="images/icons/telegram.png" alt="Telegram icon" />
+          </a>
+        </li>
+
+        <li class="footer__social">
+          <a href="https://twitter.com">
+            <img class="icon" src="images/icons/twitter.png" alt="Twitter icon" />
+          </a>
+        </li>
+
+        <li class="footer__social">
+          <a href="https://youtube.com">
+            <img class="icon" src="images/icons/youtube.png" alt="Youtube icon" />
+          </a>
+        </li>
+      </ul>
+      <span class="footer__copyright-notice">Copyright &copy; 2022 E-Learning</span>
+    </div>
+  </footer>
+
+
+  <script src="js/main.js"></script>
+</body>
+
 </html>
