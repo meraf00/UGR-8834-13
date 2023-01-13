@@ -1,71 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="Discrete Mathematics course overview" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css">
-    <title>Course overview</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <img
-          src="images/logo.png"
-          width="50px"
-          height="50px"
-          alt="E-learning logo"
-        />
 
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="courses.html">Courses</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="login.html">Log in</a></li>
-          <li><a href="user-dashboard.html">Dashboard</a></li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="Discrete Mathematics course overview" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>Course overview</title>
+</head>
 
-    <aside>
-      <h1>Course Outline</h1>
+<body>
+  <nav class="navbar">
+    <img class="navbar__logo" src="images/logo.png" width="50px" height="50px" alt="E-learning logo" />
 
-      <ul>
-        <li>
-          <a href="#description">Description</a>
+    <ul class="nav list">
+      <li class="nav__item"><a class="link link--undecorated nav__link--active" href="home.html">Home</a></li>
+      <li class="nav__item"><a class="link link--undecorated" href="courses.html">Courses</a></li>
+      <li class="nav__item"><a class="link link--undecorated" href="about.html">About</a></li>
+      <li class="nav__item"><a class="link link--undecorated" href="contact.html">Contact</a></li>
+      <li class="nav__item"><a class="link link--undecorated" href="login.html">Log in</a></li>
+      <li class="nav__item"><a class="link link--undecorated" href="user-dashboard.html">Dashboard</a></li>
+    </ul>
+  </nav>
+
+  <div class="grid grid--3-col">
+    <aside class="sidebar sidebar--border-right sidebar--sticky">
+      <h1 class="sidebar__title">Course Outline</h1>
+
+      <ul class="list sidebar__content">
+        <li class="list__item">
+          <a class="link link--undecorated" href="#description">Description</a>
         </li>
-        <li>
-          <a href="#instructor">Instructors</a>
+        <li class="list__item">
+          <a class="link link--undecorated" href="#instructor">Instructors</a>
         </li>
-        <li>
-          <a href="#resource">Resources</a>
-          <ul>
-            <li>
-              <a href="#reading-material">Reading materials</a>
+        <li class="list__item">
+          <a class="link link--undecorated" href="#resource">Resources</a>
+          <ul class="list">
+            <li class="list__item">
+              <a class="link link--undecorated" href="#reading-material">Reading materials</a>
             </li>
-            <li>
-              <a href="#videos">Videos</a>
+            <li class="list__item">
+              <a class="link link--undecorated" href="#videos">Videos</a>
             </li>
-            <li>
-              <a href="#audios">Audios</a>
+            <li class="list__item">
+              <a class="link link--undecorated" href="#audios">Audios</a>
             </li>
           </ul>
         </li>
       </ul>
     </aside>
 
-    <article>
-      <header>
-        <h1>Discrete Mathematics for Computer Science</h1>
-        <a href="course.html">Start course</a>
+    <article class="container container--unpadded">
+      <header class="container__title--space-between">
+        <h1 class="container__title">Discrete Mathematics for Computer Science</h1>
+        <a class="button link--undecorated" href="course.html">Start course</a>
       </header>
 
-      <section>
-        <h2 id="description">Description</h2>
+      <section class="section">
+        <h2 class="section__title" id="description">Description</h2>
 
-        <p>
+        <p class="section__content">
           Discrete mathematics forms the mathematical foundation of computer and
           information science. It is also a fascinating subject in itself.
           Learners will become familiar with a broad range of mathematical
@@ -76,7 +72,7 @@
           themselves; and coming up with interesting results.
         </p>
 
-        <p>
+        <p class="section__content">
           A discrete mathematics course has more than one purpose. Students
           should learn a particular set of mathematical facts and how to apply
           them; more importantly, such a course should teach students how to
@@ -84,58 +80,54 @@
         </p>
       </section>
 
-      <section>
-        <h2 id="instructor">Instructors</h2>
+      <section class="section">
+        <h2 class="section__title" id="instructor">Instructors</h2>
 
-        <ul>
-          <li>Henok Alemu, PhD.</li>
-          <li>Hewan Sintayehu, PhD.</li>
-          <li>Kiros Adugna, PhD.</li>
+        <ul class="list list--dot">
+          <li class="list__item">Henok Alemu, PhD.</li>
+          <li class="list__item">Hewan Sintayehu, PhD.</li>
+          <li class="list__item">Kiros Adugna, PhD.</li>
         </ul>
       </section>
 
-      <section>
+      <section class="section">
         <hgroup>
-          <h2 id="resource">Resources</h2>
-          <h3 id="reading-material">Reading materials</h3>
+          <h2 class="section__title" id="resource">Resources</h2>
+          <h3 class="section__subtitle" id="reading-material">Reading materials</h3>
         </hgroup>
 
-        <ul>
-          <li>
-            <a
-              href="https://www.amazon.com/Discrete-Mathematics-Applications-Kenneth-Rosen-ebook/dp/B07FF9DY66"
-            >
+        <ul class="list section__content">
+          <li class="list__item">
+            <a class="link link--undecorated"
+              href="https://www.amazon.com/Discrete-Mathematics-Applications-Kenneth-Rosen-ebook/dp/B07FF9DY66">
               Discrete Mathematics and Its Applications 8th Edition, by Kenneth
               Rosen (Author)
             </a>
           </li>
-          <li>
-            <a
-              href="https://www.amazon.com/Discrete-Mathematics-Applications-Susanna-Epp-ebook/dp/B00B6FAZ2Q"
-            >
+          <li class="list__item">
+            <a class="link link--undecorated"
+              href="https://www.amazon.com/Discrete-Mathematics-Applications-Susanna-Epp-ebook/dp/B00B6FAZ2Q">
               Discrete Mathematics with Applications 4th Edition, Susanna S. Epp
               (Author)
             </a>
           </li>
         </ul>
 
-        <h3 id="videos">Videos</h3>
-        <ul>
-          <li>
-            <div>
-              <div>
-                <a href="course.html#introduction">
-                  <img
-                    src="images/video-thumbnails/introduction-to-logic.png"
-                    alt="Introduction to Logic"
-                  />
+        <h3 class="section__subtitle" id="videos">Videos</h3>
+        <ul class="list section__content">
+          <li class="list__item">
+            <div class="grid grid--2-col shaded">
+              <div class="container container--unpadded">
+                <a class="link link--undecorated" href="course.html#introduction">
+                  <img class="thumbnail" src="images/video-thumbnails/introduction-to-logic.png"
+                    alt="Introduction to Logic" />
                 </a>
               </div>
 
-              <div>
-                <strong>Introduction to Logic</strong>
+              <div class="container container--unpadded">
+                <strong class="section__subtitle">Introduction to Logic</strong>
 
-                <p>
+                <p class="section__content">
                   A beginner friendly introduction to formal mathematical logic.
                 </p>
               </div>
@@ -143,73 +135,99 @@
           </li>
         </ul>
 
-        <h3 id="audios">Audios</h3>
-        <ul>
-          <li>
-            <audio controls>
-              <source src="audios/learn-to-code.mp3" />
-            </audio>
+        <h3 class="section__subtitle" id="audios">Audios</h3>
+        <ul class="list section__content">
+          <li class="list__item">
+            <div class="section shaded">
+              <audio class="section__content" controls>
+                <source src="audios/learn-to-code.mp3" />
+              </audio>
 
-            <div>
-              <strong>How to learn programming?</strong>
-              <p>
+              <div class="section__subtitle">
+                <strong>How to learn programming?</strong>
+              </div>
+              <p class="section__content">
                 Here are some tips on how you can to avoid wasting time when
                 you're learning programming.
               </p>
-            </div>
 
-            <div>
-              <strong>Audio Transcript</strong>
+              <div id="audio-1-transcript" class="section section--hidden">
+                <strong class="section__subtitle">Audio Transcript</strong>
+                <p class="section__content">
+                  When you're learning to code do you ever feel like you're stuck
+                  learning the same thing over and over again?
+                </p>
+              </div>
 
-              <p>
-                When you're learning to code do you ever feel like you're stuck
-                learning the same thing over and over again?
-              </p>
+              <div>
+                <button class="button toggle-transcript" data-target="audio-1-transcript">Show Transcript</button>
+              </div>
             </div>
           </li>
         </ul>
       </section>
     </article>
+  </div>
 
-    <footer>
-      <div>
-        <div>
-          <span>Sitemap</span>
-          <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="about.html">About us</a></li>
-            <li><a href="contact.html">Contact us</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <span>Contributers</span>
-          <ul>
-            <li>
-              <a href="http://www.aau.edu.et/">Addis Ababa University </a>
-            </li>
-            <li>
-              <a href="http://www.bdu.edu.et/">Bahirdar University </a>
-            </li>
-            <li>
-              <a href="https://moe.gov.et/">Ministry of Eduction </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div>
-        <ul>
-          <li><a href="https://facebook.com">Facebook</a></li>
-          <li><a href="https://t.me/elearning000">Telegram</a></li>
-          <li><a href="https://twitter.com">Twitter</a></li>
-          <li><a href="https://youtube.com">Youtube</a></li>
+  <footer class="container footer">
+    <div class="footer__content">
+      <div class="footer__group">
+        <span class="container__title">Sitemap</span>
+        <ul class="list footer__list">
+          <li><a class="link link--undecorated" href="home.html">Home</a></li>
+          <li><a class="link link--undecorated" href="courses.html">Courses</a></li>
+          <li><a class="link link--undecorated" href="about.html">About us</a></li>
+          <li><a class="link link--undecorated" href="contact.html">Contact us</a></li>
         </ul>
-        <span>Copyright &copy; 2022 E-Learning</span>
       </div>
-    </footer>
 
-    <script src="js/main.js"></script>
-  </body>
+      <div class="footer__group">
+        <span class="container__title">Contributers</span>
+        <ul class="list footer__list">
+          <li>
+            <a class="link link--undecorated" href="http://www.aau.edu.et/">Addis Ababa University </a>
+          </li>
+          <li>
+            <a class="link link--undecorated" href="http://www.bdu.edu.et/">Bahirdar University </a>
+          </li>
+          <li>
+            <a class="link link--undecorated" href="https://moe.gov.et/">Ministry of Eduction </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__copyright">
+      <ul class="list footer__list footer__list--flex">
+        <li class="footer__social">
+          <a href="https://facebook.com">
+            <img class="icon" src="images/icons/facebook.png" alt="Facebook icon" />
+          </a>
+        </li>
+
+        <li class="footer__social">
+          <a href="https://t.me/elearning000">
+            <img class="icon" src="images/icons/telegram.png" alt="Telegram icon" />
+          </a>
+        </li>
+
+        <li class="footer__social">
+          <a href="https://twitter.com">
+            <img class="icon" src="images/icons/twitter.png" alt="Twitter icon" />
+          </a>
+        </li>
+
+        <li class="footer__social">
+          <a href="https://youtube.com">
+            <img class="icon" src="images/icons/youtube.png" alt="Youtube icon" />
+          </a>
+        </li>
+      </ul>
+      <span class="footer__copyright-notice">Copyright &copy; 2022 E-Learning</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
 </html>
