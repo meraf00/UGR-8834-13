@@ -62,3 +62,54 @@ tabNavigationButtons.forEach((button) => {
     target.classList.toggle("tab__content--hidden", false);
   });
 });
+
+// toggle menu
+const menu = document.querySelector(".humberger-menu");
+
+menu.addEventListener("click", () => {
+  menu.classList.toggle("humberger-menu--open");
+  const target = document.getElementById(menu.dataset.target);
+  target.classList.toggle("nav--show");
+});
+
+// check quiz
+const quizForm = document.getElementById("quiz-form");
+quizForm?.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const ans1 = quizForm.elements["q1"].value;
+  const ans2 = quizForm.elements["q2"].value;
+
+  const choiceDiv1 = document.getElementById(`q1-${ans1}`)?.parentNode;
+  const choiceDiv2 = document.getElementById(`q2-${ans2}`)?.parentNode;
+
+  if (ans1 == "C") {
+    choiceDiv1?.classList.toggle("quiz__choice--correct", true);
+  } else {
+    choiceDiv1?.classList.toggle("quiz__choice--wrong", true);
+  }
+
+  if (ans2 == "D") {
+    choiceDiv2?.classList.toggle("quiz__choice--correct", true);
+  } else {
+    choiceDiv2?.classList.toggle("quiz__choice--wrong", true);
+  }
+});
+
+// validate login
+const loginForm = document.getElementById("login-form");
+loginForm?.addEventListener("submit", (e)=> {
+  e.preventDefault();
+    
+  const passwordField = loginForm.elements["password"];
+  
+  if (passwordField.value.length < 6) {
+    const message = document.querySelector(".message");
+    message.innerHTML = "Password must be atleast 6 characters long."
+    message.classList.toggle("message--error", true);    
+  }
+
+  else {
+    window.location.href = "home.html";
+  }
+    
+});

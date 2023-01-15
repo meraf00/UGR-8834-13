@@ -14,7 +14,14 @@
   <nav class="navbar">
     <img class="navbar__logo" src="images/logo.png" width="50px" height="50px" alt="E-learning logo" />
 
-    <ul class="nav list">
+    <div class="humberger-menu mobile" data-target="navigation">      
+      <span class="humberger-menu__bar"></span>
+      <span class="humberger-menu__bar"></span>
+      <span class="humberger-menu__bar"></span>
+      <span class="humberger-menu__bar"></span>
+    </div>
+
+    <ul class="nav list" id="navigation">
       <li class="nav__item"><a class="link link--undecorated nav__link--active" href="home.html">Home</a></li>
       <li class="nav__item"><a class="link link--undecorated" href="courses.html">Courses</a></li>
       <li class="nav__item"><a class="link link--undecorated" href="about.html">About</a></li>
@@ -23,8 +30,9 @@
       <li class="nav__item"><a class="link link--undecorated" href="user-dashboard.html">Dashboard</a></li>
     </ul>
   </nav>
+
   <header class="header">
-    <form class="search" action="">
+    <form class="search" action="courses.html">
       <h1 class="header__title">E-learning</h1>
       <div class="search__input">
         <label class="search__input-label" for="search__field" id="search__field-label">Search course</label>

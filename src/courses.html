@@ -14,7 +14,14 @@
   <nav class="navbar">
     <img class="navbar__logo" src="images/logo.png" width="50px" height="50px" alt="E-learning logo" />
 
-    <ul class="nav list">
+    <div class="humberger-menu mobile" data-target="navigation">
+      <span class="humberger-menu__bar"></span>
+      <span class="humberger-menu__bar"></span>
+      <span class="humberger-menu__bar"></span>
+      <span class="humberger-menu__bar"></span>
+    </div>
+
+    <ul class="nav list " id="navigation">
       <li class="nav__item"><a class="link link--undecorated nav__link--active" href="home.html">Home</a></li>
       <li class="nav__item"><a class="link link--undecorated" href="courses.html">Courses</a></li>
       <li class="nav__item"><a class="link link--undecorated" href="about.html">About</a></li>
@@ -28,32 +35,32 @@
     <aside class="sidebar sidebar--border-right sidebar--sticky">
       <h1 class="sidebar__title">Filters</h1>
 
-      <form>
-        <div>
-          <label for="course-length">Course length</label>
 
-          <select name="course-length" id="course-length">
-            <option value="short">Short</option>
-            <option value="medium">Medium</option>
-            <option value="long">Long</option>
-          </select>
-        </div>
+      <div>
+        <label for="course-length">Course length</label>
 
-        <div>
-          <label for="course-difficulty">Difficulty </label>
+        <select form="search-form" class="select" name="course-length" id="course-length">
+          <option value="short">Short</option>
+          <option value="medium">Medium</option>
+          <option value="long">Long</option>
+        </select>
+      </div>
 
-          <select name="course-difficulty" id="course-difficulty">
-            <option value="beginner">Beginner</option>
-            <option value="intermediate">Intermediate</option>
-            <option value="advanced">Advanced</option>
-          </select>
-        </div>
-      </form>
+      <div>
+        <label for="course-difficulty">Difficulty</label>
+
+        <select form="search-form" class="select" name="course-difficulty" id="course-difficulty">
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+        </select>
+      </div>
+
     </aside>
 
     <main class="container container--unpadded">
       <section class="section">
-        <form class="section__content section__content--flex" action="">
+        <form class="section__content section__content--flex" action="" id="search-form">
           <div class="search__input">
             <label class="search__input-label" for="search__field" id="search__field-label">Search course</label>
             <input class="input input--bordered" type="text" name="search__field" id="search__field"
@@ -65,12 +72,12 @@
 
         <h1 class="section__title">Search results</h1>
 
-        <div class="grid .grid--3-equicols">
+        <div class="grid grid--3-equicols">
 
           <div class="course" data-link="course-overview.html">
             <img class="course__thumbnail" src="images/courses/discrete-mathematics.png"
               alt="Discrete mathematics course" />
-    
+
             <div class="course__content">
               <a class="link link--undecorated course__link" href="course-overview.html"> Discrete Mathematics </a>
               <p class="course__description">
@@ -80,8 +87,47 @@
               <p class="course__rating">&#9733; 4.8</p>
             </div>
           </div>
-        </div>        
-        
+          <div class="course" data-link="course-overview.html">
+            <img class="course__thumbnail" src="images/courses/discrete-mathematics.png"
+              alt="Discrete mathematics course" />
+
+            <div class="course__content">
+              <a class="link link--undecorated course__link" href="course-overview.html"> Discrete Mathematics </a>
+              <p class="course__description">
+                In this course, we will cover mathematical structures that can be considered
+                "discrete" rather than "continuous".
+              </p>
+              <p class="course__rating">&#9733; 4.8</p>
+            </div>
+          </div>
+          <div class="course" data-link="course-overview.html">
+            <img class="course__thumbnail" src="images/courses/discrete-mathematics.png"
+              alt="Discrete mathematics course" />
+
+            <div class="course__content">
+              <a class="link link--undecorated course__link" href="course-overview.html"> Discrete Mathematics </a>
+              <p class="course__description">
+                In this course, we will cover mathematical structures that can be considered
+                "discrete" rather than "continuous".
+              </p>
+              <p class="course__rating">&#9733; 4.8</p>
+            </div>
+          </div>
+          <div class="course" data-link="course-overview.html">
+            <img class="course__thumbnail" src="images/courses/discrete-mathematics.png"
+              alt="Discrete mathematics course" />
+
+            <div class="course__content">
+              <a class="link link--undecorated course__link" href="course-overview.html"> Discrete Mathematics </a>
+              <p class="course__description">
+                In this course, we will cover mathematical structures that can be considered
+                "discrete" rather than "continuous".
+              </p>
+              <p class="course__rating">&#9733; 4.8</p>
+            </div>
+          </div>
+        </div>
+
       </section>
     </main>
   </div>

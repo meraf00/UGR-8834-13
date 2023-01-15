@@ -14,7 +14,14 @@
   <nav class="navbar">
     <img class="navbar__logo" src="images/logo.png" width="50px" height="50px" alt="E-learning logo" />
 
-    <ul class="nav list">
+    <div class="humberger-menu mobile" data-target="navigation">
+      <span class="humberger-menu__bar"></span>
+      <span class="humberger-menu__bar"></span>
+      <span class="humberger-menu__bar"></span>
+      <span class="humberger-menu__bar"></span>
+    </div>
+
+    <ul class="nav list" id="navigation">
       <li class="nav__item"><a class="link link--undecorated nav__link--active" href="home.html">Home</a></li>
       <li class="nav__item"><a class="link link--undecorated" href="courses.html">Courses</a></li>
       <li class="nav__item"><a class="link link--undecorated" href="about.html">About</a></li>
@@ -54,16 +61,16 @@
         </ul>
       </div>
 
-      <form action="" class="container__content">
+      <form class="container__content center-sm">
         <div class="container__content">
           <label for="email-field">Email</label>
-          <input class="input input--bordered" type="email" id="email-field" placeholder="Your email" />
+          <input class="input input--bordered" type="email" id="email-field" placeholder="Your email" required />
         </div>
 
         <div class="container__content">
           <label for="message-field">Message</label>
           <textarea class="input input--bordered textarea" name="message" id="message-field" cols="30" rows="10"
-            placeholder="Your message"></textarea>
+            placeholder="Your message" required></textarea>
         </div>
         <div class="container__content">
           <input class="button" type="submit" value="Send" />

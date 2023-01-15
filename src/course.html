@@ -14,7 +14,14 @@
   <nav class="navbar">
     <img class="navbar__logo" src="images/logo.png" width="50px" height="50px" alt="E-learning logo" />
 
-    <ul class="nav list">
+    <div class="humberger-menu mobile" data-target="navigation">
+      <span class="humberger-menu__bar"></span>
+      <span class="humberger-menu__bar"></span>
+      <span class="humberger-menu__bar"></span>
+      <span class="humberger-menu__bar"></span>
+    </div>
+
+    <ul class="nav list " id="navigation">
       <li class="nav__item"><a class="link link--undecorated nav__link--active" href="home.html">Home</a></li>
       <li class="nav__item"><a class="link link--undecorated" href="courses.html">Courses</a></li>
       <li class="nav__item"><a class="link link--undecorated" href="about.html">About</a></li>
@@ -23,7 +30,6 @@
       <li class="nav__item"><a class="link link--undecorated" href="user-dashboard.html">Dashboard</a></li>
     </ul>
   </nav>
-
   <div class="grid grid--3-col">
     <aside class="sidebar sidebar--border-right sidebar--sticky">
       <h1 class="sidebar__title">Discrete Mathematics</h1>
@@ -52,7 +58,7 @@
       <h1 id="introduction" class="container__title">Introduction to Logic</h1>
 
       <section class="section">
-        <video class="video section__content" controls>
+        <video class="video" controls>
           <source type="video/mp4" src="videos/lecture-1.mp4" />
           <track src="videos/lecture-1.vtt" label="English" kind="captions" srclang="en-us" default />
         </video>
@@ -96,81 +102,83 @@
           the premises are all true.
         </p>
 
-        <table class="table">
-          <thead class="table__head">
-            <tr class="table__tr">
-              <th class="table__th">Rule of Inference</th>
-              <th class="table__th">Tautology</th>
-              <th class="table__th">Name</th>
-            </tr>
-          </thead>
-          <tbody class="table__body">
-            <tr class="table__tr">
-              <td class="table__td">p, p → q ∴ q</td>
-              <td class="table__td">p ∧ (p → q)) → q</td>
-              <td class="table__td">Modus ponens</td>
-            </tr>
+        <div class="table">
+          <table class="table">
+            <thead class="table__head">
+              <tr class="table__tr">
+                <th class="table__th">Rule of Inference</th>
+                <th class="table__th">Tautology</th>
+                <th class="table__th">Name</th>
+              </tr>
+            </thead>
+            <tbody class="table__body">
+              <tr class="table__tr">
+                <td class="table__td">p, p → q ∴ q</td>
+                <td class="table__td">p ∧ (p → q)) → q</td>
+                <td class="table__td">Modus ponens</td>
+              </tr>
 
-            <tr class="table__tr">
-              <td class="table__td">¬q, p → q ∴ ¬p</td>
-              <td class="table__td">(¬q ∧ (p → q)) → ¬p</td>
-              <td class="table__td">Modus tollens</td>
-            </tr>
-            <tr class="table__tr">
-              <td class="table__td">p → q, q → r ∴ p → r</td>
-              <td class="table__td">((p → q) ∧ (q → r)) → (p → r)</td>
-              <td class="table__td">Hypothetical syllogism</td>
-            </tr>
-            <tr class="table__tr">
-              <td class="table__td">p ∨ q, ¬p ∴ q</td>
-              <td class="table__td">((p ∨ q) ∧ ¬p) → q</td>
-              <td class="table__td">Disjunctive syllogism</td>
-            </tr>
-          </tbody>
-        </table>
+              <tr class="table__tr">
+                <td class="table__td">¬q, p → q ∴ ¬p</td>
+                <td class="table__td">(¬q ∧ (p → q)) → ¬p</td>
+                <td class="table__td">Modus tollens</td>
+              </tr>
+              <tr class="table__tr">
+                <td class="table__td">p → q, q → r ∴ p → r</td>
+                <td class="table__td">((p → q) ∧ (q → r)) → (p → r)</td>
+                <td class="table__td">Hypothetical syllogism</td>
+              </tr>
+              <tr class="table__tr">
+                <td class="table__td">p ∨ q, ¬p ∴ q</td>
+                <td class="table__td">((p ∨ q) ∧ ¬p) → q</td>
+                <td class="table__td">Disjunctive syllogism</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <section class="section">
         <h1 class="section__title">Quiz</h1>
 
-        <form action="">
+        <form id="quiz-form">
           <fieldset class="quiz">
             <legend class="quiz__question">Which one of the following is a proposition?</legend>
             <div class="quiz__choice">
-              <input type="radio" value="A" id="q1-a" name="q1" />
-              <label class="quiz__label" for="q1-a">A. What time is it?</label>
+              <input type="radio" value="A" id="q1-A" name="q1" />
+              <label class="quiz__label" for="q1-A">A. What time is it?</label>
             </div>
             <div class="quiz__choice">
-              <input type="radio" value="B" id="q1-b" name="q1" />
-              <label class="quiz__label" for="q1-b">B. Read this carefully</label>
+              <input type="radio" value="B" id="q1-B" name="q1" />
+              <label class="quiz__label" for="q1-B">B. Read this carefully</label>
             </div>
             <div class="quiz__choice">
-              <input type="radio" value="C" id="q1-c" name="q1" />
-              <label class="quiz__label" for="q1-c">C. Toronto is the capital of Canada.</label>
+              <input type="radio" value="C" id="q1-C" name="q1" />
+              <label class="quiz__label" for="q1-C">C. Toronto is the capital of Canada.</label>
             </div>
             <div class="quiz__choice">
-              <input type="radio" value="D" id="q1-d" name="q1" />
-              <label class="quiz__label" for="q1-d">D. All</label>
+              <input type="radio" value="D" id="q1-D" name="q1" />
+              <label class="quiz__label" for="q1-D">D. All</label>
             </div>
           </fieldset>
 
           <fieldset class="quiz">
             <legend class="quiz__question">Which one is not valid argument?</legend>
             <div class="quiz__choice">
-              <input type="radio" value="A" id="q2-a" name="q2" />
-              <label class="quiz__label" for="q2-a">A. p → q q → r ∴ p → r</label>
+              <input type="radio" value="A" id="q2-A" name="q2" />
+              <label class="quiz__label" for="q2-A">A. p → q q → r ∴ p → r</label>
             </div>
             <div class="quiz__choice">
-              <input type="radio" value="B" id="q2-b" name="q2" />
-              <label class="quiz__label" for="q2-b">B. p ∨ q ¬p ∴ q</label>
+              <input type="radio" value="B" id="q2-B" name="q2" />
+              <label class="quiz__label" for="q2-B">B. p ∨ q ¬p ∴ q</label>
             </div>
             <div class="quiz__choice">
-              <input type="radio" value="C" id="q2-c" name="q2" />
-              <label class="quiz__label" for="q2-c">C. ¬q p → q ∴ ¬p</label>
+              <input type="radio" value="C" id="q2-C" name="q2" />
+              <label class="quiz__label" for="q2-C">C. ¬q p → q ∴ ¬p</label>
             </div>
             <div class="quiz__choice">
-              <input type="radio" value="D" id="q2-d" name="q2" />
-              <label class="quiz__label" for="q2-d">D. None</label>
+              <input type="radio" value="D" id="q2-D" name="q2" />
+              <label class="quiz__label" for="q2-D">D. None</label>
             </div>
           </fieldset>
 
