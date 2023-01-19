@@ -6,278 +6,302 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="description" content="Introductory course for Discrete Mathematics" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <title>Introduction to Discrete Mathematics for Computer Science</title>
 </head>
 
 <body>
-  <nav class="navbar">
-    <img class="navbar__logo" src="images/logo.png" width="50px" height="50px" alt="E-learning logo" />
-
-    <div class="humberger-menu mobile" data-target="navigation">
-      <span class="humberger-menu__bar"></span>
-      <span class="humberger-menu__bar"></span>
-      <span class="humberger-menu__bar"></span>
-      <span class="humberger-menu__bar"></span>
+  <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
+      <img class="navbar-brand" src="images/logo.png" width="50px" height="50px" alt="E-learning logo" />
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
+        aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
     </div>
 
-    <ul class="nav list " id="navigation">
-      <li class="nav__item"><a class="link link--undecorated nav__link--active" href="index.html">Home</a></li>
-      <li class="nav__item"><a class="link link--undecorated" href="courses.html">Courses</a></li>
-      <li class="nav__item"><a class="link link--undecorated" href="about.html">About</a></li>
-      <li class="nav__item"><a class="link link--undecorated" href="contact.html">Contact</a></li>
-      <li class="nav__item"><a class="link link--undecorated" href="login.html">Log in</a></li>
-      <li class="nav__item"><a class="link link--undecorated" href="user-dashboard.html">Dashboard</a></li>
-    </ul>
-  </nav>
-  <div class="grid grid--3-col">
-    <aside class="sidebar sidebar--border-right sidebar--sticky">
-      <h1 class="sidebar__title">Discrete Mathematics</h1>
-
-      <ul class="list sidebar__content">
-        <li class="list__item">
-          <a class="link link--undecorated" href="#introduction">Introduction</a>
-        </li>
-
-        <li class="list__item">
-          <a class="link link--undecorated" href="#propositional-logic">Propositional Logic</a>
-
-          <ul class="list">
-            <li class="list__item">
-              <a class="link link--undecorated" href="#proposition">Proposition</a>
-            </li>
-            <li class="list__item">
-              <a class="link link--undecorated" href="#rules-of-inference">Rules of Inference</a>
-            </li>
-          </ul>
-        </li>
+    <div class="collapse navbar-collapse" id="navigation">
+      <ul class="navbar-nav mx-4 mb-2 mb-md-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="user-dashboard.html">Dashboard</a></li>
       </ul>
-    </aside>
+    </div>
+  </nav>
 
-    <article class="container container--unpadded">
-      <h1 id="introduction" class="container__title">Introduction to Logic</h1>
-
-      <section class="section">
-        <video class="video" controls>
-          <source type="video/mp4" src="videos/lecture-1.mp4" />
-          <track src="videos/lecture-1.vtt" label="English" kind="captions" srclang="en-us" default />
-        </video>
-
-        <div class="section__title">
-          <strong>Video Transcript</strong>
-        </div>
-
-        <p class="shaded section__content">
-          Now whats interesting about this is the way in which it worked.
-          Because this machine, was dedicated to playing chess.
-        </p>
-      </section>
-
-      <section class="section">
-        <h1 id="propositional-logic" class="section__title">Propositional Logic</h1>
-
-        <h2 id="proposition" class="section__subtitle">Proposition</h2>
-
-        <p class="section__content">
-          A proposition is a declarative sentence (that is, a sentence that
-          declares a fact) that is either true or false, but not both. We use
-          letters to denote propositional variables(orsentential variables),
-          that is, variables that represent propositions, just as letters are
-          used to denote numerical variables. The conventional letters used for
-          propositional variables are p, q, r, s, … . The truth value of a
-          proposition
-        </p>
-
-        <h2 id="rules-of-inference" class="section__subtitle">Rules of Inference</h2>
-
-        <p class="section__content">
-          An argument in propositional logic is a sequence of propositions. All
-          but the final proposition in the argument are called premises and the
-          final proposition is called the conclusion. An argument is valid if
-          the truth of all its premises implies that the conclusion is true. An
-          argument form in propositional logic is a sequence of compound
-          propositions involving propositional variables. An argument form is
-          valid if no matter which particular propositions are substituted for
-          the propositional variables in its premises, the conclusion is true if
-          the premises are all true.
-        </p>
-
-        <div class="table">
-          <table class="table">
-            <thead class="table__head">
-              <tr class="table__tr">
-                <th class="table__th">Rule of Inference</th>
-                <th class="table__th">Tautology</th>
-                <th class="table__th">Name</th>
-              </tr>
-            </thead>
-            <tbody class="table__body">
-              <tr class="table__tr">
-                <td class="table__td">p, p → q ∴ q</td>
-                <td class="table__td">p ∧ (p → q)) → q</td>
-                <td class="table__td">Modus ponens</td>
-              </tr>
-
-              <tr class="table__tr">
-                <td class="table__td">¬q, p → q ∴ ¬p</td>
-                <td class="table__td">(¬q ∧ (p → q)) → ¬p</td>
-                <td class="table__td">Modus tollens</td>
-              </tr>
-              <tr class="table__tr">
-                <td class="table__td">p → q, q → r ∴ p → r</td>
-                <td class="table__td">((p → q) ∧ (q → r)) → (p → r)</td>
-                <td class="table__td">Hypothetical syllogism</td>
-              </tr>
-              <tr class="table__tr">
-                <td class="table__td">p ∨ q, ¬p ∴ q</td>
-                <td class="table__td">((p ∨ q) ∧ ¬p) → q</td>
-                <td class="table__td">Disjunctive syllogism</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section class="section">
-        <h1 class="section__title">Quiz</h1>
-
-        <form id="quiz-form">
-          <fieldset class="quiz">
-            <legend class="quiz__question">Which one of the following is a proposition?</legend>
-            <div class="quiz__choice">
-              <input type="radio" value="A" id="q1-A" name="q1" />
-              <label class="quiz__label" for="q1-A">A. What time is it?</label>
+  <div class="container-fluid">
+    <div class="row mt-1">
+      <aside class="col-lg-2 col-md-12 mt-4 bg-white">
+        <h1 class="d-flex align-items-center mb-3 text-decoration-none border-bottom">
+          <span class="fs-5 fw-semibold px-2">Discrete Mathematics</span>
+        </h1>
+        <ul class="list-unstyled ps-0">
+          <li class="mb-1">
+            <a href="#introduction" class="btn d-inline-flex align-items-center rounded border-0" aria-expanded="true">
+              Introduction
+            </a>
+          </li>
+          <li class="mb-1">
+            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+              data-bs-toggle="collapse" data-bs-target="#subtitle-1" aria-expanded="false">
+              Propositional Logic
+            </button>
+            <div class="collapse" id="subtitle-1">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#proposition" class="link-dark d-inline-flex text-decoration-none rounded">Proposition</a>
+                </li>
+                <li><a href="#rules-of-inference" class="link-dark d-inline-flex text-decoration-none rounded">Rule of
+                    Inference</a></li>
+              </ul>
             </div>
-            <div class="quiz__choice">
-              <input type="radio" value="B" id="q1-B" name="q1" />
-              <label class="quiz__label" for="q1-B">B. Read this carefully</label>
-            </div>
-            <div class="quiz__choice">
-              <input type="radio" value="C" id="q1-C" name="q1" />
-              <label class="quiz__label" for="q1-C">C. Toronto is the capital of Canada.</label>
-            </div>
-            <div class="quiz__choice">
-              <input type="radio" value="D" id="q1-D" name="q1" />
-              <label class="quiz__label" for="q1-D">D. All</label>
-            </div>
-          </fieldset>
+          </li>
+          <li class="border-top my-3"></li>
+        </ul>
+      </aside>
 
-          <fieldset class="quiz">
-            <legend class="quiz__question">Which one is not valid argument?</legend>
-            <div class="quiz__choice">
-              <input type="radio" value="A" id="q2-A" name="q2" />
-              <label class="quiz__label" for="q2-A">A. p → q q → r ∴ p → r</label>
-            </div>
-            <div class="quiz__choice">
-              <input type="radio" value="B" id="q2-B" name="q2" />
-              <label class="quiz__label" for="q2-B">B. p ∨ q ¬p ∴ q</label>
-            </div>
-            <div class="quiz__choice">
-              <input type="radio" value="C" id="q2-C" name="q2" />
-              <label class="quiz__label" for="q2-C">C. ¬q p → q ∴ ¬p</label>
-            </div>
-            <div class="quiz__choice">
-              <input type="radio" value="D" id="q2-D" name="q2" />
-              <label class="quiz__label" for="q2-D">D. None</label>
-            </div>
-          </fieldset>
 
-          <input class="button" type="submit" value="Check" />
-        </form>
-      </section>
-    </article>
+      <article class="col-lg-7 col-md-12 mt-3">
+        <h1 id="introduction" class="p-2">Introduction to Logic</h1>
 
-    <aside class="sidebar sidebar--right sidebar--border-left">
-      <h2 class="sidebar__title sidebar__title--medium">Supportive resources</h2>
-      <div class="sidebar__content">
-        <ul class="list">
-          <li class="list__item">
-            <a class="link link--undecorated"
+        <section class="container">
+          <video class="w-100" controls>
+            <source type="video/mp4" src="videos/lecture-1.mp4" />
+            <track src="videos/lecture-1.vtt" label="English" kind="captions" srclang="en-us" default />
+          </video>
+
+          <div>
+            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+              data-bs-toggle="collapse" data-bs-target="#transcript-1" aria-expanded="false">
+              Video Transcript
+            </button>
+            <p class="p-3 text-bg-light collapse" id="transcript-1">
+              Now whats interesting about this is the way in which it worked.
+              Because this machine, was dedicated to playing chess.
+            </p>
+          </div>
+
+        </section>
+
+        <section class="container">
+          <h1 id="propositional-logic">Propositional Logic</h1>
+
+          <h2 id="proposition">Proposition</h2>
+
+          <p>
+            A proposition is a declarative sentence (that is, a sentence that
+            declares a fact) that is either true or false, but not both. We use
+            letters to denote propositional variables(orsentential variables),
+            that is, variables that represent propositions, just as letters are
+            used to denote numerical variables. The conventional letters used for
+            propositional variables are p, q, r, s, … . The truth value of a
+            proposition
+          </p>
+
+          <h2 id="rules-of-inference">Rules of Inference</h2>
+
+          <p>
+            An argument in propositional logic is a sequence of propositions. All
+            but the final proposition in the argument are called premises and the
+            final proposition is called the conclusion. An argument is valid if
+            the truth of all its premises implies that the conclusion is true. An
+            argument form in propositional logic is a sequence of compound
+            propositions involving propositional variables. An argument form is
+            valid if no matter which particular propositions are substituted for
+            the propositional variables in its premises, the conclusion is true if
+            the premises are all true.
+          </p>
+
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead class="table-primary">
+                <tr>
+                  <th>Rule of Inference</th>
+                  <th>Tautology</th>
+                  <th>Name</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>p, p → q ∴ q</td>
+                  <td>p ∧ (p → q)) → q</td>
+                  <td>Modus ponens</td>
+                </tr>
+
+                <tr>
+                  <td>¬q, p → q ∴ ¬p</td>
+                  <td>(¬q ∧ (p → q)) → ¬p</td>
+                  <td>Modus tollens</td>
+                </tr>
+                <tr>
+                  <td>p → q, q → r ∴ p → r</td>
+                  <td>((p → q) ∧ (q → r)) → (p → r)</td>
+                  <td>Hypothetical syllogism</td>
+                </tr>
+                <tr>
+                  <td>p ∨ q, ¬p ∴ q</td>
+                  <td>((p ∨ q) ∧ ¬p) → q</td>
+                  <td>Disjunctive syllogism</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="section">
+          <h1 class="section__title">Quiz</h1>
+
+          <form id="quiz-form" class="p-2 text-bg-light">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <fieldset>
+                  <legend class="quiz__question">Which one of the following is a proposition?</legend>
+                  <div class="quiz__choice">
+                    <input type="radio" value="A" id="q1-A" name="q1" />
+                    <label class="quiz__label" for="q1-A">A. What time is it?</label>
+                  </div>
+                  <div class="quiz__choice">
+                    <input type="radio" value="B" id="q1-B" name="q1" />
+                    <label class="quiz__label" for="q1-B">B. Read this carefully</label>
+                  </div>
+                  <div class="quiz__choice">
+                    <input type="radio" value="C" id="q1-C" name="q1" />
+                    <label class="quiz__label" for="q1-C">C. Toronto is the capital of Canada.</label>
+                  </div>
+                  <div class="quiz__choice">
+                    <input type="radio" value="D" id="q1-D" name="q1" />
+                    <label class="quiz__label" for="q1-D">D. All</label>
+                  </div>
+                </fieldset>
+              </li>
+
+              <li class="list-group-item">
+                <fieldset class="quiz">
+                  <legend class="quiz__question">Which one is not valid argument?</legend>
+                  <div class="quiz__choice">
+                    <input type="radio" value="A" id="q2-A" name="q2" />
+                    <label class="quiz__label" for="q2-A">A. p → q q → r ∴ p → r</label>
+                  </div>
+                  <div class="quiz__choice">
+                    <input type="radio" value="B" id="q2-B" name="q2" />
+                    <label class="quiz__label" for="q2-B">B. p ∨ q ¬p ∴ q</label>
+                  </div>
+                  <div class="quiz__choice">
+                    <input type="radio" value="C" id="q2-C" name="q2" />
+                    <label class="quiz__label" for="q2-C">C. ¬q p → q ∴ ¬p</label>
+                  </div>
+                  <div class="quiz__choice">
+                    <input type="radio" value="D" id="q2-D" name="q2" />
+                    <label class="quiz__label" for="q2-D">D. None</label>
+                  </div>
+                </fieldset>
+              </li>
+
+            </ul>
+
+
+            <input class="btn btn-primary mt-3" type="submit" value="Check" />
+          </form>
+        </section>
+      </article>
+
+      <aside class="col-lg-3 col-md-12 mt-4">
+        <h2 class="d-flex align-items-center mb-3 text-decoration-none">
+          <span class="fs-5 fw-semibold px-2">Supportive resources</span>
+        </h2>
+
+        <ul class="list-group ps-0 ps-0">
+          <li class="list-group-item list-group-item-secondary">
+            <a class="text-decoration-none"
               href="https://www.amazon.com/Discrete-Mathematics-Applications-Kenneth-Rosen-ebook/dp/B07FF9DY66">
               Discrete Mathematics and Its Applications 8th Edition, by Kenneth
               Rosen (Author)
             </a>
           </li>
-          <li class="list__item">
-            <a class="link link--undecorated"
+          <li class="list-group-item list-group-item-secondary">
+            <a class="text-decoration-none"
               href="https://www.amazon.com/Discrete-Mathematics-Applications-Susanna-Epp-ebook/dp/B00B6FAZ2Q">
               Discrete Mathematics with Applications 4th Edition, Susanna S. Epp
               (Author)
             </a>
           </li>
         </ul>
-      </div>
 
-      <h2 class="sidebar__title sidebar__title--medium">Related courses</h2>
-      <div class="sidebar__content">
-        <ul class="list">
-          <li class="list__item">
-            <a class="link link--undecorated" href="course-overview.html">Introduction to Discrete Mathematics</a>
+        <h2 class="d-flex align-items-center mb-3 text-decoration-none">
+          <span class="fs-5 fw-semibold px-2 mt-4">Related courses</span>
+        </h2>
+
+        <ul class="list-group ps-0">
+          <li class="list-group-item list-group-item-secondary">
+            <a class="text-decoration-none" href="course-overview.html">Introduction to Discrete Mathematics</a>
           </li>
         </ul>
-      </div>
-    </aside>
+      </aside>
+
+    </div>
   </div>
 
-  <footer class="container footer">
-    <div class="footer__content">
-      <div class="footer__group">
-        <span class="container__title">Sitemap</span>
-        <ul class="list footer__list">
-          <li><a class="link link--undecorated" href="index.html">Home</a></li>
-          <li><a class="link link--undecorated" href="courses.html">Courses</a></li>
-          <li><a class="link link--undecorated" href="about.html">About us</a></li>
-          <li><a class="link link--undecorated" href="contact.html">Contact us</a></li>
-        </ul>
+
+  <div class="container">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Sitemap</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-muted">Home</a></li>
+            <li class="nav-item mb-2"><a href="courses.html" class="nav-link p-0 text-muted">Courses</a></li>
+            <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-muted">About us</a></li>
+            <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-muted">Contact us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Contributers</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="http://www.aau.edu.et/" class="nav-link p-0 text-muted">Addis Ababa
+                University</a></li>
+            <li class="nav-item mb-2"><a href="http://www.bdu.edu.et/" class="nav-link p-0 text-muted">Bahirdar
+                University</a></li>
+            <li class="nav-item mb-2"><a href="https://moe.gov.et/" class="nav-link p-0 text-muted">Ministry of
+                Eduction</a></li>
+          </ul>
+        </div>
       </div>
 
-      <div class="footer__group">
-        <span class="container__title">Contributers</span>
-        <ul class="list footer__list">
-          <li>
-            <a class="link link--undecorated" href="http://www.aau.edu.et/">Addis Ababa University </a>
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>Copyright &copy; 2022 E-Learning</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3">
+            <a href="https://facebook.com">
+              <img class="icon" src="images/icons/facebook.png" alt="Facebook icon" />
+            </a>
           </li>
-          <li>
-            <a class="link link--undecorated" href="http://www.bdu.edu.et/">Bahirdar University </a>
+          <li class="ms-3">
+            <a href="https://t.me/elearning000">
+              <img class="icon" src="images/icons/telegram.png" alt="Telegram icon" />
+            </a>
           </li>
-          <li>
-            <a class="link link--undecorated" href="https://moe.gov.et/">Ministry of Eduction </a>
+          <li class="ms-3">
+            <a href="https://twitter.com">
+              <img class="icon" src="images/icons/twitter.png" alt="Twitter icon" />
+            </a>
+          </li>
+          <li class="ms-3">
+            <a href="https://youtube.com">
+              <img class="icon" src="images/icons/youtube.png" alt="Youtube icon" />
+            </a>
           </li>
         </ul>
       </div>
-    </div>
+    </footer>
+  </div>
 
-    <div class="footer__copyright">
-      <ul class="list footer__list footer__list--flex">
-        <li class="footer__social">
-          <a href="https://facebook.com">
-            <img class="icon" src="images/icons/facebook.png" alt="Facebook icon" />
-          </a>
-        </li>
-
-        <li class="footer__social">
-          <a href="https://t.me/elearning000">
-            <img class="icon" src="images/icons/telegram.png" alt="Telegram icon" />
-          </a>
-        </li>
-
-        <li class="footer__social">
-          <a href="https://twitter.com">
-            <img class="icon" src="images/icons/twitter.png" alt="Twitter icon" />
-          </a>
-        </li>
-
-        <li class="footer__social">
-          <a href="https://youtube.com">
-            <img class="icon" src="images/icons/youtube.png" alt="Youtube icon" />
-          </a>
-        </li>
-      </ul>
-      <span class="footer__copyright-notice">Copyright &copy; 2022 E-Learning</span>
-    </div>
-  </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

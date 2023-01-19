@@ -6,111 +6,120 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="description" content="Find and take courses online" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <title>E-learing</title>
 </head>
 
 <body>
-  <nav class="navbar">
-    <img class="navbar__logo" src="images/logo.png" width="50px" height="50px" alt="E-learning logo" />
-
-    <div class="humberger-menu mobile" data-target="navigation">
-      <span class="humberger-menu__bar"></span>
-      <span class="humberger-menu__bar"></span>
-      <span class="humberger-menu__bar"></span>
-      <span class="humberger-menu__bar"></span>
+  <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
+      <img class="navbar-brand" src="images/logo.png" width="50px" height="50px" alt="E-learning logo" />
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
+        aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
     </div>
 
-    <ul class="nav list" id="navigation">
-      <li class="nav__item"><a class="link link--undecorated nav__link--active" href="index.html">Home</a></li>
-      <li class="nav__item"><a class="link link--undecorated" href="courses.html">Courses</a></li>
-      <li class="nav__item"><a class="link link--undecorated" href="about.html">About</a></li>
-      <li class="nav__item"><a class="link link--undecorated" href="contact.html">Contact</a></li>
-      <li class="nav__item"><a class="link link--undecorated" href="login.html">Log in</a></li>
-      <li class="nav__item"><a class="link link--undecorated" href="user-dashboard.html">Dashboard</a></li>
-    </ul>
+    <div class="collapse navbar-collapse" id="navigation">
+      <ul class="navbar-nav mx-4 mb-2 mb-md-0">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="user-dashboard.html">Dashboard</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <header class="header">
-    <form class="search" action="courses.html">
-      <h1 class="header__title">E-learning</h1>
-      <div class="search__input">
-        <label class="search__input-label" for="search__field" id="search__field-label">Search course</label>
-        <input class="input" type="text" name="search__field" id="search__field" data-label="search__field-label" />
-      </div>
-      <input class="button search__button" type="submit" value="Find course" />
-    </form>
-  </header>
+  <div class="px-4 py-5 text-center hero">
+    <h1 class="display-5 mt-5 mb-3 fw-bold">E-learning</h1>
+    <div class="container">
+      <form class="mt-4 p-4 w-50 m-auto" action="courses.html">
 
-  <section class="container">
-    <h1 class="container__title">Top Courses</h1>
-
-    <div class="cards">
-      <div class="course" data-link="course-overview.html">
-        <img class="course__thumbnail" src="images/courses/discrete-mathematics.png"
-          alt="Discrete mathematics course" />
-
-        <div class="course__content">
-          <a class="link link--undecorated course__link" href="course-overview.html"> Discrete Mathematics </a>
-          <p class="course__description">
-            In this course, we will cover mathematical structures that can be considered
-            "discrete" rather than "continuous".
-          </p>
-          <p class="course__rating">&#9733; 4.8</p>
+        <div class="input-group">
+          <div class="form-floating">
+            <input class="form-control" type="text" name="search-field" id="search-field" placeholder="Email" required />
+            <label for="search-field">Search</label>
+          </div>
+  
+          <input class="btn btn-lg btn-primary" type="submit" value="Find course" />
         </div>
-      </div>
-      <div class="course" data-link="course-overview.html">
-        <img class="course__thumbnail" src="images/courses/discrete-mathematics.png"
-          alt="Discrete mathematics course" />
 
-        <div class="course__content">
-          <a class="link link--undecorated course__link" href="course-overview.html"> Discrete Mathematics </a>
-          <p class="course__description">
-            In this course, we will cover mathematical structures that can be considered
-            "discrete" rather than "continuous".
-          </p>
-          <p class="course__rating">&#9733; 4.8</p>
+      </form>
+    </div>
+  </div>
+
+  <section class="container mt-5">
+    <h1>Top Courses</h1>
+
+    <div class="container mt-3">
+      <div class="row my-3 flex-nowrap overflow-x-auto">
+        <div class="col">
+          <div class="card shadow mb-4" style="width: 16rem;">
+            <img class="card-img-top" src="images/courses/discrete-mathematics.png" alt="Discrete mathematics course">
+            <div class="card-body">
+              <h5 class="card-title">Discrete Mathematics</h5>
+              <p class="card-text">In this course, we will cover mathematical structures that can be considered
+                "discrete" rather than "continuous".</p>
+              <p class="card-text text-primary-emphasis">&#9733; 4.8</p>
+              <a href="course-overview.html" class="btn btn-primary">Course overview</a>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="course" data-link="course-overview.html">
-        <img class="course__thumbnail" src="images/courses/discrete-mathematics.png"
-          alt="Discrete mathematics course" />
-
-        <div class="course__content">
-          <a class="link link--undecorated course__link" href="course-overview.html"> Discrete Mathematics </a>
-          <p class="course__description">
-            In this course, we will cover mathematical structures that can be considered
-            "discrete" rather than "continuous".
-          </p>
-          <p class="course__rating">&#9733; 4.8</p>
+        <div class="col">
+          <div class="card shadow mb-4" style="width: 16rem;">
+            <img class="card-img-top" src="images/courses/discrete-mathematics.png" alt="Discrete mathematics course">
+            <div class="card-body">
+              <h5 class="card-title">Discrete Mathematics</h5>
+              <p class="card-text">In this course, we will cover mathematical structures that can be considered
+                "discrete" rather than "continuous".</p>
+              <p class="card-text text-primary-emphasis">&#9733; 4.8</p>
+              <a href="course-overview.html" class="btn btn-primary">Course overview</a>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="course" data-link="course-overview.html">
-        <img class="course__thumbnail" src="images/courses/discrete-mathematics.png"
-          alt="Discrete mathematics course" />
-
-        <div class="course__content">
-          <a class="link link--undecorated course__link" href="course-overview.html"> Discrete Mathematics </a>
-          <p class="course__description">
-            In this course, we will cover mathematical structures that can be considered
-            "discrete" rather than "continuous".
-          </p>
-          <p class="course__rating">&#9733; 4.8</p>
+        <div class="col">
+          <div class="card shadow mb-4" style="width: 16rem;">
+            <img class="card-img-top" src="images/courses/discrete-mathematics.png" alt="Discrete mathematics course">
+            <div class="card-body">
+              <h5 class="card-title">Discrete Mathematics</h5>
+              <p class="card-text">In this course, we will cover mathematical structures that can be considered
+                "discrete" rather than "continuous".</p>
+              <p class="card-text text-primary-emphasis">&#9733; 4.8</p>
+              <a href="course-overview.html" class="btn btn-primary">Course overview</a>
+            </div>
+          </div>
         </div>
-      </div>
+        <div class="col">
+          <div class="card shadow mb-4" style="width: 16rem;">
+            <img class="card-img-top" src="images/courses/discrete-mathematics.png" alt="Discrete mathematics course">
+            <div class="card-body">
+              <h5 class="card-title">Discrete Mathematics</h5>
+              <p class="card-text">In this course, we will cover mathematical structures that can be considered
+                "discrete" rather than "continuous".</p>
+              <p class="card-text text-primary-emphasis">&#9733; 4.8</p>
+              <a href="course-overview.html" class="btn btn-primary">Course overview</a>
+            </div>
+          </div>
+        </div>
+        
+        
 
+      </div>
     </div>
   </section>
 
-  <section class="container">
-    <h1 class="container__title" c>Our Belief</h1>
-    <p class="container__content">
+  <section class="container mt-5">    
+    <h1>Our Belief</h1>
+    <p>
       The world is yet to see that talent is everywhere, but opportunity is
       not. That is why we want to provide quality education for all.
     </p>
 
-    <h1 class="container__title">Vision</h1>
-    <p class="container__content">
+    <h1 class="mt-4">Vision</h1>
+    <p>
       E-learn upskills high-potential students, connects them with great
       teachers around the world, and creates digital solutions to urgent
       problems in their home countries. The platform is free for all, making
@@ -119,65 +128,63 @@
     </p>
   </section>
 
-  <footer class="container footer">
-    <div class="footer__content">
-      <div class="footer__group">
-        <span class="container__title">Sitemap</span>
-        <ul class="list footer__list">
-          <li><a class="link link--undecorated" href="index.html">Home</a></li>
-          <li><a class="link link--undecorated" href="courses.html">Courses</a></li>
-          <li><a class="link link--undecorated" href="about.html">About us</a></li>
-          <li><a class="link link--undecorated" href="contact.html">Contact us</a></li>
-        </ul>
+  <div class="container">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Sitemap</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-muted">Home</a></li>
+            <li class="nav-item mb-2"><a href="courses.html" class="nav-link p-0 text-muted">Courses</a></li>
+            <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-muted">About us</a></li>
+            <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-muted">Contact us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Contributers</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="http://www.aau.edu.et/" class="nav-link p-0 text-muted">Addis Ababa
+                University</a></li>
+            <li class="nav-item mb-2"><a href="http://www.bdu.edu.et/" class="nav-link p-0 text-muted">Bahirdar
+                University</a></li>
+            <li class="nav-item mb-2"><a href="https://moe.gov.et/" class="nav-link p-0 text-muted">Ministry of
+                Eduction</a></li>
+          </ul>
+        </div>
       </div>
 
-      <div class="footer__group">
-        <span class="container__title">Contributers</span>
-        <ul class="list footer__list">
-          <li>
-            <a class="link link--undecorated" href="http://www.aau.edu.et/">Addis Ababa University </a>
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>Copyright &copy; 2022 E-Learning</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3">
+            <a href="https://facebook.com">
+              <img class="icon" src="images/icons/facebook.png" alt="Facebook icon" />
+            </a>
           </li>
-          <li>
-            <a class="link link--undecorated" href="http://www.bdu.edu.et/">Bahirdar University </a>
+          <li class="ms-3">
+            <a href="https://t.me/elearning000">
+              <img class="icon" src="images/icons/telegram.png" alt="Telegram icon" />
+            </a>
           </li>
-          <li>
-            <a class="link link--undecorated" href="https://moe.gov.et/">Ministry of Eduction </a>
+          <li class="ms-3">
+            <a href="https://twitter.com">
+              <img class="icon" src="images/icons/twitter.png" alt="Twitter icon" />
+            </a>
+          </li>
+          <li class="ms-3">
+            <a href="https://youtube.com">
+              <img class="icon" src="images/icons/youtube.png" alt="Youtube icon" />
+            </a>
           </li>
         </ul>
       </div>
-    </div>
+    </footer>
+  </div>
 
-    <div class="footer__copyright">
-      <ul class="list footer__list footer__list--flex">
-        <li class="footer__social">
-          <a href="https://facebook.com">
-            <img class="icon" src="images/icons/facebook.png" alt="Facebook icon" />
-          </a>
-        </li>
-
-        <li class="footer__social">
-          <a href="https://t.me/elearning000">
-            <img class="icon" src="images/icons/telegram.png" alt="Telegram icon" />
-          </a>
-        </li>
-
-        <li class="footer__social">
-          <a href="https://twitter.com">
-            <img class="icon" src="images/icons/twitter.png" alt="Twitter icon" />
-          </a>
-        </li>
-
-        <li class="footer__social">
-          <a href="https://youtube.com">
-            <img class="icon" src="images/icons/youtube.png" alt="Youtube icon" />
-          </a>
-        </li>
-      </ul>
-      <span class="footer__copyright-notice">Copyright &copy; 2022 E-Learning</span>
-    </div>
-  </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
